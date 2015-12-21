@@ -1,9 +1,6 @@
+//reverse a string 
 import java.util.*;
-
-public class reverse{
-
-
-	
+public class reverse{	
 	public static void main(String[] args){
 		String str= args[0];
 		StringBuffer s= new StringBuffer();
@@ -11,8 +8,5 @@ public class reverse{
 			s.append(str.charAt(i));
 		}
 		System.out.println(s.toString());
-
-
-
-		}
+	}
 }

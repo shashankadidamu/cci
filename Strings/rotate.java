@@ -1,6 +1,6 @@
 
+//Given 2 strings , check if one is rotation of another using one call to isSubstring
 public class rotate{
-	
 	static boolean isSubstring(String s1, String s2){
 		boolean flag= false;
 		int count=0;
@@ -16,17 +16,13 @@ public class rotate{
 				}
 				else
 					break;
-
 			}
 			if(count==s2.length())
 				return true;
-
 		}
 		return false;
-
 	}
 	public static void main(String[] args){
-
 		String str = args[0];
 		String str2 = args[1];
 		String str1= str+str;

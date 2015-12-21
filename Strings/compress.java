@@ -1,10 +1,7 @@
-
+//Basic string compression using counts of repeated characters
 public class compress{
-	
 	public static void main(String[] args){
-
 		String str = args[0];
-
 		char ch = str.charAt(0);
 		char temp;
 		int count=1;
@@ -24,9 +21,7 @@ public class compress{
 				s.append(ch);
 				s.append(count);
 			}
-
 		}
-
 		System.out.println(s.toString());
 	}
 }
