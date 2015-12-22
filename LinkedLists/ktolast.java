@@ -1,3 +1,5 @@
+//find the kth to last element of a single linked list
+
 class Node {
 	
 	int data;
@@ -36,6 +38,7 @@ class Node {
 		return h;
 	}
 
+	//Iterative
 	int kthToLast(Node head, int k){
 		Node p1 = head;
 		Node p2 = head;
@@ -56,6 +59,7 @@ class Node {
 
 	}
 
+	//Recursive
 	int kthtolastnew(Node head, int k){
 		if(head==null)
 			return 0;
