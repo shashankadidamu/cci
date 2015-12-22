@@ -1,4 +1,6 @@
 // Remove duplicates from an unsorted linkedlist, no temporary buffer 
+import java.util.*;
+
 class Node {
 	
 	int data;
@@ -64,20 +66,45 @@ class Node {
 			current = current.next;
 		}
 	}
+
+	void deleteDuplicatesNew(Node n){
+		Hashtable table= new Hashtable();
+		Node previous = null;
+		while(n != null){
+			if(table.containsKey(n.data)){
+				previous.next = n.next;
+			}
+			else{
+				table.put(n.data, true);
+				previous = n;
+			}
+			n=n.next;
+		}
+	}
 }
 
 class removeDuplicates {
 	
 	public static void main(String[] args){
+		int max = 10;
+		int min = 1;
+		Random rand = new Random();
+		int num,i=1;
 		Node ll = new Node(2);
-		ll.appendToTail(2);
-		ll.appendToTail(3);
-		ll.appendToTail(1);
-		ll.appendToTail(2);
-		ll.appendToTail(5);
-		ll.appendToTail(3);
-		ll.appendToTail(5);
-		ll.appendToTail(5);
+		while(i<11){
+			num = rand.nextInt((max-min)+1)+min;
+			ll.appendToTail(num);
+			i++;
+		} 
+		ll.llprint();
+		ll.deleteDuplicatesNew(ll);
+		ll.llprint();
+
+		while(i<15){
+			num = rand.nextInt((max-min)+1)+min;
+			ll.appendToTail(num);
+			i++;
+		} 
 		ll.llprint();
 		ll.deleteDuplicates(ll);
 		ll.llprint();
