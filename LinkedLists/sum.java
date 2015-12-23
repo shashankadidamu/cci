@@ -9,17 +9,13 @@ class Node{
 	void addtolist(int d){
 		
 		Node temp=this;
-		if(temp==null){
-			this.data=d;
-			this.next=null;
-		}
-		else{
+		
 			Node n = new Node(d);
 			while(temp.next!=null){
 				temp=temp.next;
 			}
 			temp.next=n;
-		}
+		
 	}
 
 	void print(){
@@ -61,7 +57,7 @@ class sum{
 	public static void main(String[] args){
 		Node list1=new Node(7);
 		list1.addtolist(1);
-		list1.addtolist(6);
+		//list1.addtolist(6);
 		Node list2=new Node(5);
 		list2.addtolist(9);
 		list2.addtolist(2);
