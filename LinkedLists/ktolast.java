@@ -78,8 +78,10 @@ class ktolast{
 		ll.addToTail(4);
 		ll.addToTail(5);
 		ll.addToTail(6);
-		ll.addToTail(6);
-		System.out.println(ll.kthToLast(ll,3));
+		ll.addToTail(7);
+		ll.addToTail(8);
+		
+		System.out.println(ll.kthToLast(ll,2));
 		ll.kthtolastnew(ll,3);
 	}
 }
